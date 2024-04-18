@@ -47,16 +47,21 @@ cte.stroke();
 const numLines = 5;
 const intervalo = c.height / (numLines + 1);
 
+let cont = 0;
+
 for (let i = 1; i <= numLines; i++) {
     let y = i * intervalo;
     ctx.beginPath();
-    ctx.moveTo(80, y);
-    ctx.lineTo(600, y);
-    ctx.strokeStyle = "green";
+    ctx.moveTo(120, y);
+    ctx.lineTo(700, y);
+    ctx.strokeStyle = "gray";
+    ctx.lineWidth = 1;
+
     ctx.stroke();
 
     // Etiquetas
+    cont+=100;
     ctx.fillStyle = "black";
     ctx.font = "14px Arial";
-    ctx.fillText("Etiqueta " + i, 10, y + 5);
+    ctx.fillText("Porcentaje " + cont, 10, y + 5);
 }
